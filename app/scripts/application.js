@@ -1,22 +1,44 @@
 define([
 	'backbone',
 	'communicator',
-	'hbs!tmpl/welcome'
+	'handlebars'
 ],
 
-function( Backbone, Communicator, Welcome_tmpl ) {
+function( Backbone, Communicator, Handlebars ) {
     'use strict';
-
-	var welcomeTmpl = Welcome_tmpl;
 
 	var App = new Backbone.Marionette.Application();
 
-	/* Add application regions here */
-	App.addRegions({});
+	/* Add base application regions here */
+	App.addRegions({
+		headerRegion: '#header-region',
+		mainRegion: '#main-region'
+	});
+
+	// Wrapper for backbone navigate
+	App.navigate = function(route, options){
+		options || (options = {});
+		Backbone.history.navigate(route, options);
+	};
+
+	// Helper method for getting current route of app
+	App.getCurrentRoute = function(){
+		return Backbone.history.fragment
+	}
 
 	/* Add initializers here */
-	App.addInitializer( function () {
-		document.body.innerHTML = welcomeTmpl({ success: "CONGRATS!" });
+	App.on("initialize:after", function () {
+
+		if(Backbone.history){
+			require(["apps/home/home_app", "apps/user/user_app"], function(){
+				Backbone.history.start();
+
+				if(App.getCurrentRoute() === ""){
+					App.trigger("home:show");
+				}
+			});
+		}
+
 		Communicator.mediator.trigger("APP:START");
 	});
 

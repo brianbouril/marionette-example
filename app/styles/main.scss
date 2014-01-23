@@ -4,3 +4,100 @@
     margin: 50px auto 0 auto;
     width: 400px;
 }
+
+/* Reusable */
+.center {
+  margin-left: auto;
+    margin-right: auto;
+}
+
+/* ============================================ */
+/* Layout Specific */
+/* ============================================ */
+
+
+#header-region {
+  .navbar {
+    min-height: 35px;
+
+    .nav {
+      margin-top: 3px
+    }
+
+    .nav-left{
+      margin-left: 20px;
+    }
+
+    .nav-right{
+      margin-right: 20px;
+    }
+
+    #globalNav{
+      position: absolute;
+      top: 50px;
+      right: 20px;
+    }
+  }
+}
+
+#main-region {
+  margin-top: 50px;
+}
+
+
+/* ============================================ */
+/* Theme Specific */
+/* ============================================ */
+
+.btn {
+  background: #6a6a6a;
+  border-radius: 0;
+  color: #FFF;
+  &:hover {
+    color: #505050;
+  }
+  &:active {
+    color: #505050;
+  }
+}
+
+.btn.mred {
+  background-color: #FF0000;
+}
+
+.dropdown-menu {
+ border-radius: 0;
+ background-color: #999;
+ li {
+  &.divider {
+    margin: 0;
+  }
+
+  a {
+    color: #FFF;
+    padding: 6px 20px;
+  }
+
+ }
+}
+
+.nav {
+  li {
+    display: inline-block;
+    a {
+      padding: 5px 14px 3px 14px;
+      font-size: 12px;
+    }
+  }
+}
+
+#header-region {
+  .navbar{
+    background-color: #000;
+
+    #globalNav{
+      border-radius: 0;
+      background-color: #CCC;
+    }
+  }
+}

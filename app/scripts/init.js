@@ -17,7 +17,9 @@ require.config({
         bootstrap: {
             deps: ['jquery'],
             exports: 'jquery'
-        }
+        },
+        "backbone.picky": ["backbone"],
+        "backbone.syphon": ["backbone"]
     },
 
     paths: {
@@ -29,6 +31,8 @@ require.config({
         'backbone.marionette': '../bower_components/backbone.marionette/lib/core/amd/backbone.marionette',
         'backbone.wreqr': '../bower_components/backbone.wreqr/lib/amd/backbone.wreqr',
         'backbone.babysitter': '../bower_components/backbone.babysitter/lib/amd/backbone.babysitter',
+        'backbone.picky': '../bower_components/backbone.picky/lib/amd/backbone.picky',
+        'backbone.syphon': '../bower_components/backbone.syphon/lib/amd/backbone.syphon',
 
         /* alias the bootstrap js lib */
         bootstrap: 'vendor/bootstrap',

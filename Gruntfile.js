@@ -45,7 +45,6 @@ module.exports = function (grunt) {
                     
                     'test/spec/{,**/}*.js'
                 ],
-                tasks: ['exec'],
                 options: {
                     livereload: true
                 }
@@ -156,6 +155,7 @@ module.exports = function (grunt) {
                 options: {
                     // `name` and `out` is set by grunt-usemin
                     baseUrl: 'app/scripts',
+                    findNestedDependencies: true,
                     optimize: 'none',
                     paths: {
                         'templates': '../../.tmp/scripts/templates'
@@ -272,7 +272,7 @@ module.exports = function (grunt) {
                     amd: true
                 },
                 files: {
-                    '.tmp/scripts/templates.js': ['templates/**/*.hbs']
+                    '.tmp/scripts/templates.js': 'templates/**/*.hbs'
                 }
             }
         }
@@ -297,7 +297,7 @@ module.exports = function (grunt) {
             'compass:server',
             'connect:testserver',
             'express:dev',
-            'exec',
+            //'exec',
             'open',
             'watch'
         ]);
