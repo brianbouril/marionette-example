@@ -30,7 +30,7 @@ function( Backbone, Communicator, Handlebars ) {
 	App.on("initialize:after", function () {
 
 		if(Backbone.history){
-			require(["apps/home/home_app", "apps/user/user_app"], function(){
+			require(["apps/home/home_app", "apps/user/user_app", "apps/reports/reports_app"], function(){
 				Backbone.history.start();
 
 				if(App.getCurrentRoute() === ""){

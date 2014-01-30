@@ -53,42 +53,15 @@
   }
 }
 
-
-/* ============================================ */
-/* Layout Specific */
-/* ============================================ */
-
-
-#footer-region {
-  .navbar {
-    min-height: 35px;
-    background-color: #000;
-
-    .nav {
-      margin-top: 3px
-    }
-
-    .nav-left{
-      margin-left: 20px;
-    }
-
-    .nav-right{
-      margin-right: 20px;
-    }
-
-    #globalNav{
-      position: absolute;
-      top: 50px;
-      right: 20px;
-      border-radius: 0;
-      background-color: #CCC;
-    }
-  }
-}
-
-
 #main-region {
   margin-top: 50px;
+  > div {
+    position: relative;
+  }
+  
 }
 
-
+//Partials
+@import "controller";
+@import "content";
+@import "footer";

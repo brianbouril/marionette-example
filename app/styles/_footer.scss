@@ -1,0 +1,45 @@
+/* ============================================ */
+/* Footer Specific */
+/* ============================================ */
+
+
+#footer-region {
+  position: relative;
+
+  .navbar {
+    min-height: 35px;
+    background-color: #000;
+
+    .nav {
+      margin-top: 3px
+    }
+
+    .nav-left{
+      margin-left: 20px;
+    }
+
+    .nav-right{
+      margin-right: 20px;
+    }
+
+    .btn-toolbar {
+      position: absolute;
+      left: 50%;
+      margin-left: -135px;
+      .btn { 
+        border-right: 2px solid #999;
+        &:last-child { 
+          border-right: none;
+        }
+      }
+    }
+
+    #globalNav{
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      border-radius: 0;
+      background-color: #CCC;
+    }
+  }
+}
