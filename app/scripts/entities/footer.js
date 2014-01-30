@@ -1,15 +1,15 @@
 define(["application", "backbone.picky"], function(App){
   App.module("Entities", function(Entities, App, Backbone, Marionette, $, _){
     
-    Entities.Header = Backbone.Model.extend({
+    Entities.Footer = Backbone.Model.extend({
       initialize: function(){
         var selectable = new Backbone.Picky.Selectable(this);
         _.extend(this, selectable);
       }
     });
 
-    Entities.HeaderCollection = Backbone.Collection.extend({
-      model: Entities.Header,
+    Entities.FooterCollection = Backbone.Collection.extend({
+      model: Entities.Footer,
 
       initialize: function(){
         var singleSelect = new Backbone.Picky.SingleSelect(this);
@@ -17,8 +17,8 @@ define(["application", "backbone.picky"], function(App){
       }
     });
 
-    var initializeHeaders = function(){
-      Entities.headers = new Entities.HeaderCollection([
+    var initializeFooters = function(){
+      Entities.footers = new Entities.FooterCollection([
         { name: "Grid", url: "grid", navigationTrigger: "grid:show" },
         { name: "Screener", url: "screener", navigationTrigger: "screener:show" },
         { name: "Tools", url: "tools", navigationTrigger: "tools:show" },
@@ -27,16 +27,16 @@ define(["application", "backbone.picky"], function(App){
     };
 
     var API = {
-      getHeaders: function(){
-        if(Entities.headers === undefined){
-          initializeHeaders();
+      getFooters: function(){
+        if(Entities.footers === undefined){
+          initializeFooters();
         }
-        return Entities.headers;
+        return Entities.footers;
       }
     };
 
-    App.reqres.setHandler("header:entities", function(){
-      return API.getHeaders();
+    App.reqres.setHandler("footer:entities", function(){
+      return API.getFooters();
     });
   });
 

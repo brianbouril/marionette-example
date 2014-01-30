@@ -2,12 +2,12 @@ define(
   [
     "application", 
     "hbs!tmpl/dropdown_list_item",
-    "hbs!tmpl/header"
-  ], function(App, DDListItem, HeaderNav_tmpl){
+    "hbs!tmpl/footer"
+  ], function(App, DDListItem, FooterNav_tmpl){
 
-  App.module("HeaderApp.View", function(View, App, Backbone, Marionette, $, _){
+  App.module("FooterApp.View", function(View, App, Backbone, Marionette, $, _){
 
-    View.Header = Marionette.ItemView.extend({
+    View.Footer = Marionette.ItemView.extend({
       template: DDListItem,
       tagName: "li",
 
@@ -28,10 +28,10 @@ define(
       }
     });
 
-    View.Headers = Marionette.CompositeView.extend({
-      template: HeaderNav_tmpl,
+    View.Footers = Marionette.CompositeView.extend({
+      template: FooterNav_tmpl,
       className: "navbar navbar-inverse navbar-fixed-bottom",
-      itemView: View.Header,
+      itemView: View.Footer,
       itemViewContainer: ".dropdown-menu",
 
       events: {
@@ -46,5 +46,5 @@ define(
 
   });
 
-  return App.HeaderApp.View;
+  return App.FooterApp.View;
 });

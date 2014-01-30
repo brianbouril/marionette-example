@@ -11,7 +11,7 @@ function( Backbone, Communicator, Handlebars ) {
 
 	/* Add base application regions here */
 	App.addRegions({
-		headerRegion: '#header-region',
+		footerRegion: '#footer-region',
 		mainRegion: '#main-region'
 	});
 

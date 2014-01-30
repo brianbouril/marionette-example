@@ -12,7 +12,7 @@ function ( Backbone, Handlebars, App ) {
   };
 
 
-  require(["application", "apps/header/header_app"], function(App){
+  require(["application", "apps/footer/footer_app"], function(App){
     App.start();
   });
 

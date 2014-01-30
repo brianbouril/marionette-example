@@ -11,44 +11,6 @@
     margin-right: auto;
 }
 
-/* ============================================ */
-/* Layout Specific */
-/* ============================================ */
-
-
-#header-region {
-  .navbar {
-    min-height: 35px;
-
-    .nav {
-      margin-top: 3px
-    }
-
-    .nav-left{
-      margin-left: 20px;
-    }
-
-    .nav-right{
-      margin-right: 20px;
-    }
-
-    #globalNav{
-      position: absolute;
-      top: 50px;
-      right: 20px;
-    }
-  }
-}
-
-#main-region {
-  margin-top: 50px;
-}
-
-
-/* ============================================ */
-/* Theme Specific */
-/* ============================================ */
-
 .btn {
   background: #6a6a6a;
   border-radius: 0;
@@ -91,13 +53,42 @@
   }
 }
 
-#header-region {
-  .navbar{
+
+/* ============================================ */
+/* Layout Specific */
+/* ============================================ */
+
+
+#footer-region {
+  .navbar {
+    min-height: 35px;
     background-color: #000;
 
+    .nav {
+      margin-top: 3px
+    }
+
+    .nav-left{
+      margin-left: 20px;
+    }
+
+    .nav-right{
+      margin-right: 20px;
+    }
+
     #globalNav{
+      position: absolute;
+      top: 50px;
+      right: 20px;
       border-radius: 0;
       background-color: #CCC;
     }
   }
 }
+
+
+#main-region {
+  margin-top: 50px;
+}
+
+
